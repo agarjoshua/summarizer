@@ -1,0 +1,14 @@
+{% extends "summarizer/base.html" %}
+ 
+{% block content %}
+
+    <h1>Text Summarizer</h1>
+    <form method="post">
+        {% csrf_token %}  
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Summarize</button>
+    </form>
+</body>
+</html>
+
+{% endblock content %}
